@@ -1,7 +1,7 @@
 import { DEFAULT_DISPLAY_TIME, errorEl, errorTextEl } from "../common.js";
 
 const renderError = (message = "Something went wrong") => {
-  errorTextEl.textContent = "Your search may not contain numbers";
+  errorTextEl.textContent = message;
   errorEl.classList.add("error--visible");
   setTimeout(
     () => errorEl.classList.remove("error--visible"),
