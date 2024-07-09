@@ -1,4 +1,4 @@
-import "./src/componenets/Error.js";
-import "./src/componenets/JobList.js";
-import "./src/componenets/Search.js";
-import "./src/componenets/Spinner.js";
+import "./src/components/Error.js";
+import "./src/components/JobList.js";
+import "./src/components/Search.js";
+import "./src/components/Spinner.js";
