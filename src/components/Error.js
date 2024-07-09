@@ -1,9 +1,12 @@
-import { errorEl, errorTextEl } from "../common.js";
+import { DEFAULT_DISPLAY_TIME, errorEl, errorTextEl } from "../common.js";
 
 const renderError = (message = "Something went wrong") => {
   errorTextEl.textContent = "Your search may not contain numbers";
   errorEl.classList.add("error--visible");
-  setTimeout(() => errorEl.classList.remove("error--visible"), 3500);
+  setTimeout(
+    () => errorEl.classList.remove("error--visible"),
+    DEFAULT_DISPLAY_TIME
+  );
 };
 
 export default renderError;
