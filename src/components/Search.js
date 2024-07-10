@@ -5,6 +5,7 @@ import {
   numberEl,
   searchFormEl,
   searchInputEl,
+  state,
 } from "../common.js";
 
 import renderError from "./Error.js";
@@ -43,6 +44,9 @@ const submitHandler = async (event) => {
     // extract the job items
     const { jobItems } = data;
 
+    // update the state
+    state.searchJobItems = jobItems;
+
     // remove the spinner
     renderSpinner("search");
 
@@ -50,7 +54,7 @@ const submitHandler = async (event) => {
     numberEl.textContent = jobItems.length;
 
     // render job items in search job list
-    renderJobList(jobItems);
+    renderJobList();
   } catch (error) {
     renderSpinner("search");
     renderError(error.message);
