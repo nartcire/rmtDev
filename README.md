@@ -20,7 +20,7 @@ The goal of this project was to make full use of the skills learned in HTML/CSS/
 
 ## Video
 
-Check out a video demo here! TODO
+Check out a video demo here! https://youtu.be/PIDaRYx5c60
 
 ## Tech Stack
 
