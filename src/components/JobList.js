@@ -49,7 +49,7 @@ const renderJobList = (whichJobList = "search") => {
                           jobItem.duration
                         }</p>
                         <p class="job-item__extra"><i class="fa-solid fa-money-bill job-item__extra-icon"></i>${
-                          jobItem.salery
+                          jobItem.salary
                         }</p>
                         <p class="job-item__extra"><i class="fa-solid fa-location-dot job-item__extra-icon"></i>"${
                           jobItem.location
