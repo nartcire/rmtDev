@@ -7,6 +7,7 @@ import {
 
 import renderError from "./Error.js";
 import renderJobDetails from "./JobDetails.js";
+import renderJobList from "./JobList.js";
 import renderSpinner from "./Spinner.js";
 
 const loadHandler = async () => {
@@ -14,6 +15,11 @@ const loadHandler = async () => {
   const id = window.location.hash.substring(1);
 
   if (id) {
+    // remove active class from previously active job items
+    document
+      .querySelectorAll(".job-item--active")
+      .forEach((jobItem) => jobItem.classList.remove("job-item--active"));
+
     // remove the previous job details content
     jobDetailsContentEl.innerHTML = "";
 
@@ -29,6 +35,9 @@ const loadHandler = async () => {
 
       // update state
       state.activeJobItem = jobItem;
+
+      // render search job list
+      renderJobList();
 
       // remove spinner
       renderSpinner("job-details");

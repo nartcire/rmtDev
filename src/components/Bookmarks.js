@@ -36,6 +36,9 @@ const clickHandler = (event) => {
   document
     .querySelector(".job-info__bookmark-icon")
     .classList.toggle("job-info__bookmark-icon--bookmarked");
+
+  // render search job list
+  renderJobList("search");
 };
 
 const mouseEnterHandler = () => {
